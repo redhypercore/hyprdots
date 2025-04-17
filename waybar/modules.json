@@ -1,0 +1,138 @@
+{
+    // Workspaces
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "rotate": 0,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "disable-scroll": false,
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "persistent-workspaces": {
+        }
+    },
+
+    // Power Menu
+    "custom/exit": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+    // Clock
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%R %a %d %b}",
+        "on-click": "ags -t calendar",
+        "tooltip": false
+    },
+
+    // CPU
+    "cpu": {
+        "format": " CPU {usage}%",
+        "on-click": "kitty -e btop"
+    },
+
+    // Memory
+    "memory": {
+        "format": "RAM {}%",
+        "on-click": "kitty -e btop"
+    },
+
+    // Language
+    "hyprland/language": {
+        "format": "{short}",
+        "format-icons": {
+            "en": "EN",
+            "ru": "RU"
+        }
+    },
+
+    // Network
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": "  {ipaddr}",
+        "format-disconnected": "Not connected",
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "kitty -e nmtui"
+    },
+
+    // Battery
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}{capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "on-click": "pavucontrol"
+    },
+
+    // Pulseaudio
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}%  {icon} {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // PlayerPause
+    "custom/playerpause": {
+        "format": "⏯",
+        "on-click": "playerctl play-pause",
+        "tooltip": false
+    },
+
+    // PlayerNext
+    "custom/playernext": {
+        "format": "⏭",
+        "on-click": "playerctl next",
+        "tooltip": false
+    },
+
+    // PlayerPrevious
+    "custom/playerprevious": {
+        "format": "⏮",
+        "on-click": "playerctl previous",
+        "tooltip": false
+    },
+
+    // Bluetooth
+    "bluetooth": {
+        "format-disabled": "",
+        "format-off": "",
+        "interval": 30,
+        "on-click": "blueman-manager",
+        "format-no-controller": ""
+    },
+
+    // Other
+    "user": {
+        "format": "{user}",
+        "interval": 60,
+        "icon": false
+    },
+
+}
+

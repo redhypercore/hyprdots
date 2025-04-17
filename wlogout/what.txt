@@ -1,0 +1,5 @@
+# Скопируй папку wlogout в /usr/share/
+sudo cp -r wlogout /usr/share/
+
+# Создай папку в конфигах и положи туда layout и style.css
+cp layout style.css ~/.config/wlogout/
