@@ -18,19 +18,17 @@
       "custom/exit",
       "cpu",
       "memory",
+      "hyprland/workspaces",
     ],
 
     // Modules Center
     "modules-center": [
-      "hyprland/workspaces",
+      
 
     ],
 
     // Modules Right    
     "modules-right": [
-      "custom/playerprevious",
-      "custom/playerpause",
-      "custom/playernext",
       "hyprland/language",
       "pulseaudio",
       "network",

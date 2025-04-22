@@ -30,13 +30,13 @@
 
     // CPU
     "cpu": {
-        "format": " CPU {usage}%",
+        "format": " C {usage}%",
         "on-click": "kitty -e btop"
     },
 
     // Memory
     "memory": {
-        "format": "RAM {}%",
+        "format": "R {}%",
         "on-click": "kitty -e btop"
     },
 
@@ -74,65 +74,44 @@
         "format-charging": "  {capacity}%",
         "format-plugged": "  {capacity}%",
         "format-icons": [" ", " ", " ", " ", " "],
-        "on-click": "pavucontrol"
+        "on-click": ""
     },
 
-    // Pulseaudio
+    // Громкость, микрофон, управление плеером
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}%  {icon} {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", " ", " "]
-        },
-        "on-click": "pavucontrol"
+    // Основной формат (динамически меняется через скрипт)
+    "format": "{icon} {volume}%  {format_source}",
+    
+    // Формат при подключении Bluetooth
+    "format-bluetooth": " {volume}%  {format_source}",
+    "format-bluetooth-muted": "  {format_source}",
+    
+    // Форматы для микрофона
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    
+    // Иконки громкости
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
     },
-
-    // PlayerPause
-    "custom/playerpause": {
-        "format": "⏯",
-        "on-click": "playerctl play-pause",
-        "tooltip": false
-    },
-
-    // PlayerNext
-    "custom/playernext": {
-        "format": "⏭",
-        "on-click": "playerctl next",
-        "tooltip": false
-    },
-
-    // PlayerPrevious
-    "custom/playerprevious": {
-        "format": "⏮",
-        "on-click": "playerctl previous",
-        "tooltip": false
-    },
-
-    // Bluetooth
-    "bluetooth": {
-        "format-disabled": "",
-        "format-off": "",
-        "interval": 30,
-        "on-click": "blueman-manager",
-        "format-no-controller": ""
-    },
-
-    // Other
-    "user": {
-        "format": "{user}",
-        "interval": 60,
-        "icon": false
-    },
+    
+    // Скрипт для отображения иконки плеера
+    "exec": "~/.config/waybar/scripts/mediaplayer.sh",
+    "return-type": "json",
+    
+    // Управление кликами
+    "on-click": "pavucontrol",               // Левый клик → микшер звука
+    "on-click-middle": "playerctl play-pause", // Средний клик → пауза/плей
+    "on-click-right": "blueman-manager",      // Правый клик → Bluetooth
+    "on-scroll-up": "playerctl next",         // Скролл вверх → след. трек
+    "on-scroll-down": "playerctl previous"    // Скролл вниз → пред. трек
+    }
 
 }
 
