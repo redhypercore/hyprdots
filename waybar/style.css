@@ -36,20 +36,20 @@ window#waybar {
   padding: 0 5px;
   border-radius: 20px;
   margin: 10px 3px;
-  color: rgba(70, 130, 180, 0.8);       /* Стальной синий (читаемый) */
-  background: rgba(255, 255, 255, 0.8);  /* Полупрозрачный белый */
+  background: #e8d6ff;  /* Светло-лавандовый */
+  color: #6a3093;       /* Тёмно-фиолетовый */
   border: none;
 }
 
 #workspaces button.active {
-  background: rgba(255, 255, 255, 0.8);  /* Яркий белый */
-  color: #4169E1;                        /* Королевский синий */
-  padding: 0 13px;
+  background: #d0d1ff;  /* Светло-сиреневый */
+  color: #4a4ac4;       /* Тёмно-синий */
+  padding: 0 10px;
   border: none;
 }
 
 #workspaces button:hover {
-  background: rgba(100, 149, 237, 0.8);  /* Яркий голубой */
+  background: rgba(100, 149, 237, 0.9);  /* Яркий голубой */
   color: white;
 }
 /* Module-specific colors, светлый стиль */
