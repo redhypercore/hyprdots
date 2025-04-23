@@ -76,6 +76,24 @@
         "format-icons": [" ", " ", " ", " ", " "],
         "on-click": ""
     },
+    
+    // Tray
+    	"tray": {
+    	"icon-theme": "Tela-circle-dracula",
+    	"icon-size": 20,
+    	"spacing": 10
+    },
+    
+    
+    "wlr/taskbar": {
+    "icon-size": 30,                  // Размер иконок
+    "icon-theme": "Tela-circle-dracula",     // Название темы иконок
+    "format": "{icon}",               // Показывать только иконку
+    "tooltip-format": "{title}",      // Подсказка с названием окна
+    "on-click": "activate",           // Клик для активации окна
+    "on-click-middle": "close",       // Средний клик для закрытия
+
+},
 
     // Громкость, микрофон, управление плеером
     "pulseaudio": {

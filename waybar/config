@@ -3,10 +3,10 @@
     "layer": "top",
     "position": "top",
 
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "margin-left": 9,
-    "margin-right": 9,
+    "margin-top": -5,
+    "margin-bottom": -3,
+    "margin-left": 8,
+    "margin-right": 8,
     
     // Load Modules
     "include": [
@@ -23,12 +23,12 @@
 
     // Modules Center
     "modules-center": [
-      
 
     ],
 
     // Modules Right    
     "modules-right": [
+      "tray",
       "hyprland/language",
       "pulseaudio",
       "network",

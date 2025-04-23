@@ -949,6 +949,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.datemenu-popover {
+  border-radius: 28px !important;
+}
+
 .datemenu-calendar-column {
   spacing: 6px;
   border: none;
@@ -1371,13 +1375,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message-view:ltr {
-  margin-right: 4px;
-  padding-left: 6px;
+  margin-right: 12px;
+  padding-left: 0;
 }
 
 .message-view:rtl {
-  margin-left: 4px;
-  padding-right: 6px;
+  margin-left: 12px;
+  padding-right: 0;
 }
 
 .message-view .message {
@@ -1452,12 +1456,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message:second-in-stack {
-  background-color: #2f313c !important;
-  box-shadow: 0 3px 2px -3px rgba(0, 0, 0, 0.3), 0 2px 2px -1px rgba(0, 0, 0, 0.24), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  background-color: #363742 !important;
+  box-shadow: none;
 }
 
 .message:lower-in-stack {
-  background-color: #363742 !important;
+  background-color: #3c3e49 !important;
   box-shadow: none;
 }
 
@@ -2087,14 +2091,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .notification-buttons-bin {
-  spacing: 0;
+  spacing: 6px;
+  padding: 0;
 }
 
 .notification-button {
-  min-height: 40px;
-  padding: 3px 16px;
+  min-height: 36px;
+  padding: 0 16px;
   margin: 0 !important;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.04);
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
   border: none;
@@ -2102,7 +2107,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu .notification-button {
-  padding: 0 16px;
   border-radius: 5px;
 }
 
@@ -2812,8 +2816,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel Gjs_arcmenu_arcmenu_com_menuButton_ArcMenuMenuButton.panel-button .arcmenu-menu-button {
   border-radius: 9999px;
-  width: 33px;
   margin: 3px 0;
+  padding: 0 8px;
 }
 
 #panel Gjs_arcmenu_arcmenu_com_menuButton_ArcMenuMenuButton.panel-button .arcmenu-menu-button:hover {
@@ -4590,7 +4594,7 @@ StWidget.focused .app-grid-running-dot {
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
   border-radius: 9999px;
   margin: 2px 3px 5px;
-  padding: 0.25em 0.4em;
+  padding: 0.2em 0.4em;
   font-weight: bold;
   text-align: center;
 }
@@ -5018,7 +5022,7 @@ StWidget.focused .app-grid-running-dot {
 
 .dashtopanelMainPanel .arcmenu-menu-button {
   border-radius: 5px !important;
-  padding: 8px 6px !important;
+  padding: 2px 4px !important;
 }
 
 .popup-menu.panel-menu .popup-menu-content, .popup-menu.panel-menu.quick-settings .popup-menu-content {

@@ -3360,13 +3360,12 @@ scale > trough > slider:active {
 }
 
 scale > trough > highlight {
-  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-image: image(#6272a4);
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
+  background-color: #6272a4;
 }
 
 scale > trough > highlight:disabled {
-  background-color: #1c1e26;
-  background-image: image(rgba(255, 255, 255, 0.3));
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 scale > trough > fill {
