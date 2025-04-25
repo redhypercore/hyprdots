@@ -1,16 +1,13 @@
 {
     // Workspaces
     "hyprland/workspaces": {
-        "disable-scroll": true,
         "rotate": 0,
         "all-outputs": true,
         "active-only": false,
-        "on-click": "activate",
         "disable-scroll": false,
         "on-scroll-up": "hyprctl dispatch workspace -1",
         "on-scroll-down": "hyprctl dispatch workspace +1",
-        "persistent-workspaces": {
-        }
+        "persistent-workspaces": {}
     },
 
     // Power Menu
@@ -24,6 +21,8 @@
     "clock": {
         "format": "{:%H:%M}",
         "format-alt": "{:%R %a %d %b}",
+        "timezone": "Europe/Samara",
+    	"locale": "en_US.UTF-8",
         "on-click": "ags -t calendar",
         "tooltip": false
     },
@@ -43,7 +42,7 @@
     // Language
     "hyprland/language": {
         "format": "{short}",
-        "format-icons": {
+        "short": {
             "en": "EN",
             "ru": "RU"
         }
@@ -78,58 +77,54 @@
     },
     
     // Tray
-    	"tray": {
-    	"icon-theme": "Tela-circle-dracula",
-    	"icon-size": 20,
-    	"spacing": 10
+    "tray": {
+        "icon-theme": "Tela-circle-dracula",
+        "icon-size": 20,
+        "spacing": 10
     },
     
-    
-    "wlr/taskbar": {
-    "icon-size": 30,                  // Размер иконок
-    "icon-theme": "Tela-circle-dracula",     // Название темы иконок
-    "format": "{icon}",               // Показывать только иконку
-    "tooltip-format": "{title}",      // Подсказка с названием окна
-    "on-click": "activate",           // Клик для активации окна
-    "on-click-middle": "close",       // Средний клик для закрытия
-
-},
+    // Уведомления
+    "custom/notification": {
+        "format": "",
+        "format-alt": "",
+        "tooltip": false,
+        "on-click": "swaync-client -t -sw",
+        "escape": true
+    },
 
     // Громкость, микрофон, управление плеером
     "pulseaudio": {
-    // Основной формат (динамически меняется через скрипт)
-    "format": "{icon} {volume}%  {format_source}",
-    
-    // Формат при подключении Bluetooth
-    "format-bluetooth": " {volume}%  {format_source}",
-    "format-bluetooth-muted": "  {format_source}",
-    
-    // Форматы для микрофона
-    "format-source": " {volume}%",
-    "format-source-muted": "",
-    
-    // Иконки громкости
-    "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", "", ""]
-    },
-    
-    // Скрипт для отображения иконки плеера
-    "exec": "~/.config/waybar/scripts/mediaplayer.sh",
-    "return-type": "json",
-    
-    // Управление кликами
-    "on-click": "pavucontrol",               // Левый клик → микшер звука
-    "on-click-middle": "playerctl play-pause", // Средний клик → пауза/плей
-    "on-click-right": "blueman-manager",      // Правый клик → Bluetooth
-    "on-scroll-up": "playerctl next",         // Скролл вверх → след. трек
-    "on-scroll-down": "playerctl previous"    // Скролл вниз → пред. трек
+        // Основной формат (динамически меняется через скрипт)
+        "format": "{icon} {volume}%  {format_source}",
+        
+        // Формат при подключении Bluetooth
+        "format-bluetooth": " {volume}%  {format_source}",
+        "format-bluetooth-muted": "  {format_source}",
+        
+        // Форматы для микрофона
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        
+        // Иконки громкости
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        
+        // Скрипт для отображения иконки плеера
+        "exec": "~/.config/waybar/scripts/mediaplayer.sh",
+        "return-type": "json",
+        
+        // Управление кликами
+        "on-click": "pavucontrol",               // Левый клик → микшер звука
+        "on-click-middle": "playerctl play-pause", // Средний клик → пауза/плей
+        "on-click-right": "blueman-manager",      // Правый клик → Bluetooth
+        "on-scroll-up": "playerctl next",         // Скролл вверх → след. трек
+        "on-scroll-down": "playerctl previous"    // Скролл вниз → пред. трек
     }
-
 }
-

@@ -3,10 +3,10 @@
     "layer": "top",
     "position": "top",
 
-    "margin-top": -5,
+    "margin-top": -6,
     "margin-bottom": -3,
-    "margin-left": 8,
-    "margin-right": 8,
+    "margin-left": -2,
+    "margin-right": -2,
     
     // Load Modules
     "include": [
@@ -34,5 +34,6 @@
       "network",
       "battery",
       "clock",
+      "custom/notification"
     ]
 }

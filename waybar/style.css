@@ -20,14 +20,18 @@ window#waybar {
 #language,
 #pulseaudio,
 #battery,
-#wlr-taskbar,
-#tray {
+#custom-notification {
   font-size: 16px;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 13px;
   margin: 10px 3px;
   padding: 0 10px;
   background: rgba(255, 255, 255, 0.1);
+}
+
+#tray {
+  background: rgba(255, 255, 255, 0);
+  padding: 0 5px;
 }
 
 /* Workspaces styling */
@@ -38,16 +42,15 @@ window#waybar {
   padding: 0 6px;
   border-radius: 20px;
   margin: 10px 3px;
-  background: #e8d6ff;  /* Светло-лавандовый */
-  color: #6a3093;       /* Тёмно-фиолетовый */
+  background: #e6d5ff;
+  color: #6a0dad;
   border: none;
 }
 
 #workspaces button.active {
-  background: #d0d1ff;  /* Светло-сиреневый */
-  color: #4a4ac4;       /* Тёмно-синий */
+  background: #e6d5ff;
+  color: #6a0dad;
   padding: 0 10px;
-  border: none;
 }
 
 #workspaces button:hover {
@@ -55,47 +58,48 @@ window#waybar {
   color: white;
 }
 /* Module-specific colors, светлый стиль */
+/* Module-specific colors — мягкие, но выразительные тона */
 #custom-exit {
-  background: #ffcdca;  /* Светло-розовый (фон) */
-  color: #d70015;       /* Тёмно-красный (текст) */
+  background: #ffd6e6;  /* Тёплый розовый */
+  color: #ad1457;       /* Глубокий малиновый */
 }
 
 #clock {
-  background: #d0d1ff;  /* Светло-сиреневый */
-  color: #4a4ac4;       /* Тёмно-синий */
+  background: #d4d4ff;  /* Сиреневый с голубым подтоном */
+  color: #4a4ac4;       /* Тёмный лавандовый */
 }
 
 #network {
-  background: #b2f5f2;  /* Светло-бирюзовый */
-  color: #008080;       /* Тёмно-бирюзовый */
+  background: #b2f5f2;  /* Ваш оригинальный бирюзовый — оставляю */
+  color: #008080;       /* Классический тёмно-бирюзовый */
 }
 
 #cpu {
-  background: #c8f7d4;  /* Светло-зелёный */
-  color: #1a7f37;       /* Тёмно-зелёный */
+  background: #d0f0c0;  /* Свежий мятный */
+  color: #1a7f37;       /* Зелёный как молодая листва */
 }
 
 #memory {
-  background: #ffeacc;  /* Светло-оранжевый */
-  color: #cc5500;       /* Тёмно-оранжевый */
+  background: #ffe0b3;  /* Светлый персик */
+  color: #cc5500;       /* Тыквенный */
 }
 
 #battery {
-  background: #fff4c2;  /* Светло-жёлтый */
-  color: #b8860b;       /* Золотисто-коричневый */
+  background: #fff4c2;  /* Сливочно-жёлтый */
+  color: #b8860b;       /* Мёд */
 }
 
 #language {
-  background: #ffd6e0;  /* Светло-розовый */
-  color: #c2185b;       /* Тёмно-розовый */
+  background: #c2e0ff;  /* Воздушно-голубой */
+  color: #005f87;       /* Глубина океана */
 }
 
 #pulseaudio {
-  background: #e8d6ff;  /* Светло-лавандовый */
-  color: #6a3093;       /* Тёмно-фиолетовый */
+  background: #e0d0ff;  /* НОВЫЙ: нежно-сиреневый */
+  color: #6a3093;       /* Тёмный фиолетовый (мягче оригинала) */
 }
 
-#tray {
-  background: rgba(100, 149, 237, 0.8);
+#custom-notification {
+  background: #ffcce0;  /* Смягчённый розовый (было #ffb3d1) */
+  color: #ad1457;       /* Оригинальный малиновый */
 }
-
