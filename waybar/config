@@ -5,8 +5,8 @@
 
     "margin-top": -6,
     "margin-bottom": -3,
-    "margin-left": -2,
-    "margin-right": -2,
+    "margin-left": 2,
+    "margin-right": 2,
     
     // Load Modules
     "include": [

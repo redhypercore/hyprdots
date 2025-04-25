@@ -62,6 +62,7 @@ window#waybar {
 #custom-exit {
   background: #ffd6e6;  /* Тёплый розовый */
   color: #ad1457;       /* Глубокий малиновый */
+  padding: 0 5 0 5;
 }
 
 #clock {
@@ -102,4 +103,5 @@ window#waybar {
 #custom-notification {
   background: #ffcce0;  /* Смягчённый розовый (было #ffb3d1) */
   color: #ad1457;       /* Оригинальный малиновый */
+  padding: 0 6 0 6;
 }
